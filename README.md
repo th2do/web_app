@@ -1,1 +1,1 @@
-# web_app
+# Repo for a simple login web app
