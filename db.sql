@@ -5,5 +5,6 @@ create table users (
   user_name varchar(50),
   hashed_pass varchar(60),
   email varchar(50),
-  mobile varchar(20)
+  mobile varchar(20),
+  unique (email)
 );
