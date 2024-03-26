@@ -7,3 +7,5 @@ For the jdbc connector portion in `Login.java` and `RegistrationServlet.java`, o
     String password = "{password}";
     String dbName = "{db_name}"; 
     Connection con = DriverManager.getConnection(url + dbName, userName, password);
+
+Update for SQL injection prevention and encoded password (could do the same for email)
