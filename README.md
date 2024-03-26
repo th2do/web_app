@@ -14,5 +14,5 @@ For the jdbc connector portion in `Login.java` and `RegistrationServlet.java`, o
 3. Storing encrypted password instead of plain text password in database (could do the same for email)
 
 # Thoughts for future improvements
-1. Login authentication
-2. Cross site scripting
+1. Email confirmation
+2. Secure cookie
