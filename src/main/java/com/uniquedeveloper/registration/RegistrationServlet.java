@@ -29,8 +29,8 @@ public class RegistrationServlet extends HttpServlet {
 		String pass = request.getParameter("pass");
 		byte[] salt = {42, -10, 127, -50, 0, 64, -128, 33, -73, 18, 55, -91, 101, -29, -16, 83}; // random
 
-        // Hash the password with bcrypt
-        String hashedPassword = OpenBSDBCrypt.generate(pass.toCharArray(), salt, 12);
+                // Hash the password with bcrypt
+                String hashedPassword = OpenBSDBCrypt.generate(pass.toCharArray(), salt, 12);
 		
 		String mobile = request.getParameter("contact");
 		RequestDispatcher dispatcher = null;
