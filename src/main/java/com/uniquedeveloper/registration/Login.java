@@ -28,9 +28,9 @@ public class Login extends HttpServlet {
 		String email = request.getParameter("username");
 		String pass = request.getParameter("password");
 
-        // encrypt password with bcrypt
+                // encrypt password with bcrypt
 		byte[] salt = {42, -10, 127, -50, 0, 64, -128, 33, -73, 18, 55, -91, 101, -29, -16, 83}; // random, same salt as in registration
-        String hashedPassword = OpenBSDBCrypt.generate(pass.toCharArray(), salt, 12);
+                String hashedPassword = OpenBSDBCrypt.generate(pass.toCharArray(), salt, 12);
         
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
@@ -62,8 +62,9 @@ public class Login extends HttpServlet {
 		    try {
 		        pst.close();
 		        con.close();
-		        } catch (Exception e) {
-		        	}
-		        }
+		    } catch (Exception e) {
+			    
+		    }
+		}
 	}
 }
