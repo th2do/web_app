@@ -8,9 +8,10 @@ For the jdbc connector portion in `Login.java` and `RegistrationServlet.java`, o
     String dbName = "{db_name}"; 
     Connection con = DriverManager.getConnection(url + dbName, userName, password);
 
-# Update 
-1. SQL injection prevention using prepared statement
-2. Storing encrypted password instead of plain text password in database (could do the same for email)
+# Update
+1. Unique user email constraint 
+2. SQL injection prevention using prepared statement
+3. Storing encrypted password instead of plain text password in database (could do the same for email)
 
 # Thoughts for future improvements
 1. Login authentication
