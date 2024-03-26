@@ -44,14 +44,17 @@ public class RegistrationServlet extends HttpServlet {
 			pst.setString(3, email);
 			pst.setString(4, mobile);
 			
-			int rowCount = pst.executeUpdate();
 			dispatcher = request.getRequestDispatcher("registration.jsp");
-			if (rowCount > 0) {
-				request.setAttribute("status", "success");
-			} else {
+			try {
+				int rowCount = pst.executeUpdate();
+				if (rowCount > 0) {
+					request.setAttribute("status", "success");
+				} else {
+					request.setAttribute("status", "failed");
+				}
+			} catch (Exception e) {
 				request.setAttribute("status", "failed");
 			}
-			
 			dispatcher.forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
