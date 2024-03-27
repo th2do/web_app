@@ -16,3 +16,4 @@ For the jdbc connector portion in `Login.java` and `RegistrationServlet.java`, o
 # Thoughts for future improvements
 1. Email confirmation
 2. Secure cookie
+3. HTTPS
